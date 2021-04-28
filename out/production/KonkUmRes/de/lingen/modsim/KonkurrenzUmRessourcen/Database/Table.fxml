@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lingen.modsim.KonkurrenzUmRessourcen.Database.TableController">
+   <children>
+      <TableView fx:id="tbDataA" editable="true" layoutY="50.0" prefHeight="200.0" prefWidth="477.0">
+        <columns>
+          <TableColumn fx:id="PopulationA" prefWidth="95.0" text="Population A" />
+          <TableColumn fx:id="WachstumsRA" prefWidth="95.0" text="Wachstums Rate A" />
+            <TableColumn fx:id="TragfähigkeitA" prefWidth="95.0" text="Tragfähigkeit A" />
+            <TableColumn fx:id="KonkEffektA" prefWidth="95.0" text="Konkurrenz Effekt A" />
+            <TableColumn fx:id="NameA" prefWidth="95.0" text="Projekt" />
+        </columns>
+      </TableView>
+      <Button fx:id="lcb" layoutX="102.0" layoutY="1.0" mnemonicParsing="false" onAction="#goLineChart" prefHeight="25.0" prefWidth="85.0" text="Line Chart" />
+      <Button fx:id="scb" layoutX="204.0" layoutY="1.0" mnemonicParsing="false" onAction="#goScatterChart" prefHeight="25.0" prefWidth="85.0" text="Scatter Chart" />
+      <TableView fx:id="tbDataB" editable="true" layoutY="250.0" prefHeight="200.0" prefWidth="477.0">
+         <columns>
+            <TableColumn fx:id="PopulationB" prefWidth="95.0" text="Population B" />
+            <TableColumn fx:id="WachstumsRB" prefWidth="95.0" text="Wachstums Rate B" />
+            <TableColumn fx:id="TragfähigkeitB" prefWidth="95.0" text="Tragfähigkeit B" />
+            <TableColumn fx:id="KonkEffektB" prefWidth="95.0" text="Konkurrenz Effekt B" />
+            <TableColumn fx:id="NameB" prefWidth="95.0" text="Projekt" />
+         </columns>
+      </TableView>
+      <Button fx:id="mcb" layoutY="1.0" mnemonicParsing="false" onAction="#goMainChart" prefHeight="25.0" prefWidth="85.0" text="Main Chart" />
+      <TableView fx:id="tbDataE" layoutX="518.0" layoutY="83.0" prefHeight="363.0" prefWidth="360.0">
+        <columns>
+          <TableColumn fx:id="Month" prefWidth="90.0" text="Month" />
+          <TableColumn fx:id="PopA" prefWidth="88.800048828125" text="Population A" />
+            <TableColumn fx:id="PopB" prefWidth="92.0" text="Population B" />
+            <TableColumn fx:id="Konk" prefWidth="90.0" text="Konkurrenz" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tf1" layoutX="529.0" layoutY="50.0" promptText="Projekt Name" />
+      <Button fx:id="leb" layoutX="715.0" layoutY="50.0" mnemonicParsing="false" onAction="#getRes" prefHeight="26.0" prefWidth="149.0" text="Lade Ergebnisse" />
+      <Button fx:id="shp" layoutX="800.0" layoutY="1.0" mnemonicParsing="false" onAction="#showPopup" prefHeight="26.0" prefWidth="77.0" text="Projekte" />
+      <Button fx:id="btndel" layoutX="710.0" layoutY="1.0" mnemonicParsing="false" onAction="#deletePopup" prefHeight="26.0" prefWidth="78.0" text="Löschen" />
+   </children>
+</AnchorPane>

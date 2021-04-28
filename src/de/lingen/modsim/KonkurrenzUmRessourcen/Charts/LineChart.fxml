@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lingen.modsim.KonkurrenzUmRessourcen.Charts.LineChartController">
+   <children>
+      <LineChart fx:id="lineChart" animated="false" createSymbols="false" layoutY="30.0" legendSide="RIGHT" prefHeight="400.0" prefWidth="500.0" snapToPixel="false" title="Konkurrenz um Ressourcen">
+        <xAxis>
+          <NumberAxis autoRanging="false" label="Time(Month)" side="BOTTOM" upperBound="25.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis autoRanging="false" cache="true" forceZeroInRange="false" minorTickCount="1" minorTickLength="2.0" minorTickVisible="false" pickOnBounds="false" prefHeight="260.0" prefWidth="22.0" side="LEFT" snapToPixel="false" tickLabelGap="2.0" tickLabelRotation="2.0" tickLength="2.0" tickMarkVisible="false" tickUnit="0.0" upperBound="2.0" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="b1" layoutX="465.0" layoutY="459.0" mnemonicParsing="false" onAction="#goMainChart" prefHeight="26.0" prefWidth="231.0" text="Zurück zum Hauptscreen">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <TextField fx:id="tf1" alignment="BOTTOM_LEFT" layoutX="500.0" layoutY="67.0" prefHeight="20.0" prefWidth="150.0" promptText="Anfangswert Population A:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf2" layoutX="500.0" layoutY="96.0" prefHeight="20.0" prefWidth="150.0" promptText="Anfangswert Population B:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf3" layoutX="500.0" layoutY="125.0" prefHeight="20.0" prefWidth="150.0" promptText="Wachstumsrate A:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf4" layoutX="500.0" layoutY="154.0" prefHeight="20.0" prefWidth="150.0" promptText="Wachstumsrate B:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf5" layoutX="500.0" layoutY="183.0" prefHeight="20.0" prefWidth="150.0" promptText="Tragfähigkeit für A:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf6" layoutX="500.0" layoutY="212.0" prefHeight="20.0" prefWidth="150.0" promptText="Tragfähigkeit für B:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf7" layoutX="500.0" layoutY="241.0" prefHeight="20.0" prefWidth="150.0" promptText="Konkurrenz Effekt auf A:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf8" layoutX="500.0" layoutY="270.0" prefHeight="20.0" prefWidth="150.0" promptText="Konkurrenz Effekt auf B:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf9" layoutX="500.0" layoutY="299.0" prefHeight="20.0" prefWidth="150.0" promptText="Projekt Name:">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </TextField>
+      <Button fx:id="createChart" layoutX="501.0" layoutY="397.0" mnemonicParsing="false" onAction="#createChart" prefHeight="26.0" prefWidth="150.0" text="Erstelle Diagramm" />
+      <Button fx:id="sbn" layoutX="501.0" layoutY="329.0" mnemonicParsing="false" onAction="#saveData" prefHeight="26.0" prefWidth="150.0" text="Speichern" />
+      <TableView fx:id="eData" layoutX="657.0" layoutY="69.0" onSort="#createChart" prefHeight="307.0" prefWidth="328.0">
+        <columns>
+          <TableColumn fx:id="Month" prefWidth="82.0" text="Monat" />
+          <TableColumn fx:id="PopA" prefWidth="82.0" text="Population A" />
+            <TableColumn fx:id="PopB" prefWidth="82.0" text="Population B" />
+            <TableColumn fx:id="Konk" prefWidth="82.0" text="Konkurrenz" />
+        </columns>
+      </TableView>
+      <Button fx:id="spe" layoutX="830.0" layoutY="460.0" mnemonicParsing="false" onAction="#saveOutput" prefHeight="26.0" prefWidth="150.0" text="Speicher Ergebnisse" />
+      <Button fx:id="dtb" alignment="TOP_LEFT" layoutY="1.0" mnemonicParsing="false" onAction="#goDatabase" prefHeight="26.0" prefWidth="1000.0" text="Database" />
+      <TextField fx:id="tf10" editable="false" layoutX="657.0" layoutY="30.0" onAction="#createChart" promptText="Projekt Ergebnisse" />
+      <Button fx:id="pjb" layoutX="501.0" layoutY="30.0" mnemonicParsing="false" onAction="#showPopup" prefHeight="26.0" prefWidth="150.0" text="Projekte" />
+      <Button fx:id="lfv" layoutX="500.0" layoutY="363.0" mnemonicParsing="false" onAction="#getFirstValues" prefHeight="26.0" prefWidth="150.0" text="Anfangswerte laden" />
+      <Button fx:id="update" layoutX="830.0" layoutY="420.0" mnemonicParsing="false" onAction="#doUpdate" prefHeight="26.0" prefWidth="150.0" text="Update" />
+   </children>
+</AnchorPane>

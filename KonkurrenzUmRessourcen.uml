@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>de.lingen.modsim.KonkurrenzUmRessourcen</OriginalElement>
+  <nodes>
+    <node x="40.0" y="76.0">de.lingen.modsim.KonkurrenzUmRessourcen.Charts</node>
+    <node x="0.0" y="323.0">de.lingen.modsim.KonkurrenzUmRessourcen.Controller</node>
+    <node x="54.16666666666667" y="192.0">de.lingen.modsim.KonkurrenzUmRessourcen.Database</node>
+    <node x="263.0" y="323.0">de.lingen.modsim.KonkurrenzUmRessourcen.Main</node>
+    <node x="23.25" y="0.0">de.lingen.modsim.KonkurrenzUmRessourcen.DES</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="de.lingen.modsim.KonkurrenzUmRessourcen.Charts" target="de.lingen.modsim.KonkurrenzUmRessourcen.Database">
+      <point x="57.77777777777777" y="13.0" />
+      <point x="162.77777777777777" y="162.0" />
+      <point x="187.08333333333337" y="162.0" />
+      <point x="60.416666666666686" y="-13.0" />
+    </edge>
+    <edge source="de.lingen.modsim.KonkurrenzUmRessourcen.Database" target="de.lingen.modsim.KonkurrenzUmRessourcen.Charts">
+      <point x="-12.083333333333343" y="-13.0" />
+      <point x="114.58333333333333" y="172.0" />
+      <point x="119.44444444444443" y="172.0" />
+      <point x="14.444444444444429" y="13.0" />
+    </edge>
+    <edge source="de.lingen.modsim.KonkurrenzUmRessourcen.Database" target="de.lingen.modsim.KonkurrenzUmRessourcen.Database">
+      <point x="18.125" y="13.0" />
+      <point x="144.79166666666669" y="258.0" />
+      <point x="14.166666666666671" y="258.0" />
+      <point x="14.166666666666671" y="201.75" />
+      <point x="-72.5" y="-3.25" />
+    </edge>
+    <edge source="de.lingen.modsim.KonkurrenzUmRessourcen.DES" target="de.lingen.modsim.KonkurrenzUmRessourcen.DES">
+      <point x="-27.25" y="13.0" />
+      <point x="50.5" y="46.0" />
+      <point x="3.25" y="46.0" />
+      <point x="3.25" y="13.0" />
+      <point x="-54.5" y="-0.0" />
+    </edge>
+    <edge source="de.lingen.modsim.KonkurrenzUmRessourcen.Charts" target="de.lingen.modsim.KonkurrenzUmRessourcen.DES">
+      <point x="0.0" y="-13.0" />
+      <point x="27.25" y="13.0" />
+    </edge>
+    <edge source="de.lingen.modsim.KonkurrenzUmRessourcen.Charts" target="de.lingen.modsim.KonkurrenzUmRessourcen.Charts">
+      <point x="-43.333333333333336" y="13.0" />
+      <point x="61.666666666666664" y="132.0" />
+      <point x="10.0" y="132.0" />
+      <point x="10.0" y="89.0" />
+      <point x="-65.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="114.0" y="119.5" />
+  <SelectedNodes>
+    <node>de.lingen.modsim.KonkurrenzUmRessourcen.Controller</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
