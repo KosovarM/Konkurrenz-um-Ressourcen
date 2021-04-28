@@ -1,0 +1,1 @@
+# Konkurrenz-um-Ressourcen
